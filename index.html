@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ShopStream – Online Shopping</title>
+<meta name="description" content="ShopStream: an Amazon-style storefront demo with search, filters, cart and checkout.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="#" id="home">shop<span>stream</span></a>
+  <div class="loc">📍 <small>Deliver to</small><b>India 515001</b></div>
+  <form class="search" id="searchForm">
+    <select id="searchCat"><option value="all">All</option></select>
+    <input id="searchInput" type="search" placeholder="Search ShopStream" aria-label="Search">
+    <button aria-label="Search">🔍</button>
+  </form>
+  <a class="hdr-link" href="#" id="signIn"><small>Hello, sign in</small><b>Account</b></a>
+  <a class="hdr-link" href="#" id="ordersLink"><small>Returns</small><b>& Orders</b></a>
+  <button class="cart-btn" id="cartBtn">🛒<span id="cartCount">0</span><b>Cart</b></button>
+</header>
+<nav class="sub" id="subNav"></nav>
+
+<main id="main">
+  <section class="hero" id="hero">
+    <div class="slide" id="slide"></div>
+    <button class="arrow l" id="prev">‹</button><button class="arrow r" id="next">›</button>
+  </section>
+  <section class="cat-cards" id="catCards"></section>
+
+  <section class="listing">
+    <aside class="filters">
+      <h3>Category</h3><div id="fCat"></div>
+      <h3>Price</h3>
+      <label><input type="radio" name="price" value="0-99999" checked> Any</label>
+      <label><input type="radio" name="price" value="0-1000"> Under ₹1,000</label>
+      <label><input type="radio" name="price" value="1000-5000"> ₹1,000 – ₹5,000</label>
+      <label><input type="radio" name="price" value="5000-20000"> ₹5,000 – ₹20,000</label>
+      <label><input type="radio" name="price" value="20000-999999"> Over ₹20,000</label>
+      <h3>Customer rating</h3>
+      <label><input type="radio" name="rating" value="0" checked> Any</label>
+      <label><input type="radio" name="rating" value="4"> ★★★★☆ &amp; up</label>
+      <label><input type="radio" name="rating" value="4.5"> ★★★★½ &amp; up</label>
+    </aside>
+    <div class="results">
+      <div class="bar">
+        <span id="resultCount"></span>
+        <select id="sort">
+          <option value="featured">Sort: Featured</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+          <option value="rating">Avg. Customer Review</option>
+        </select>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <button onclick="window.scrollTo({top:0,behavior:'smooth'})">Back to top</button>
+  <p>ShopStream is a demo project for learning. No real purchases are made. Not affiliated with any retailer.</p>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Cart">
+  <div class="drawer-h"><h2>Shopping Cart</h2><button id="closeDrawer">✕</button></div>
+  <div id="cartItems"></div>
+  <div class="drawer-f" id="cartFooter"></div>
+</aside>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true"></div>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>
