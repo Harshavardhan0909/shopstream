@@ -1,40 +1,79 @@
-# ShopStream
+# 🛍️ ShopStream
 
-An Amazon-style e-commerce storefront built with plain HTML, CSS and JavaScript. No build step and no dependencies. It is a learning/portfolio project and is not affiliated with any retailer.
+A modern, Amazon-inspired e-commerce storefront built using **HTML, CSS, and Vanilla JavaScript**. Features a responsive shopping experience with product browsing, filtering, cart management, checkout, and order history.
 
-## Features
+## ✨ Features
 
-- Sticky header with category search, cart counter and orders link
-- Auto-rotating hero banner and category cards
-- 24 products with ratings, discounts, "Deal" badges
-- Filters: category, price range, customer rating; sorting
-- Product detail modal, Add to Cart and Buy Now
-- Cart drawer with quantity controls, persisted in `localStorage`
-- Checkout form with order summary (delivery, tax) and order confirmation
-- Order history saved locally
-- Responsive layout (desktop and mobile)
+- **Product Catalog** – 24 products with ratings, discounts, and deal badges.
+- **Smart Search & Filters** – Search by category, price range, and customer rating.
+- **Sorting** – Sort products based on price and other criteria.
+- **Product Details** – Interactive product detail modal.
+- **Shopping Cart** – Add, remove, and update product quantities.
+- **Checkout** – Order summary with delivery charges and taxes.
+- **Order Management** – Order confirmation and locally stored order history.
+- **Responsive Design** – Optimized for desktop and mobile devices.
+- **Persistent Storage** – Cart and order data saved using `localStorage`.
 
-## Run locally
+## 🛠️ Tech Stack
 
-Open `index.html` in a browser, or run `python3 -m http.server 8000` and visit http://localhost:8000.
+- HTML5
+- CSS3
+- Vanilla JavaScript (ES6+)
+- Browser LocalStorage
 
-## Deploy (GitHub Pages, free)
+## 🚀 Getting Started
 
-1. Create a new GitHub repository (for example `shopstream`) and push this folder to the `main` branch:
+1. Clone the repository:
+
    ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: ShopStream storefront"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/shopstream.git
-   git push -u origin main
+   git clone https://github.com/<your-username>/shopstream.git
    ```
-2. In the repo go to **Settings → Pages → Build and deployment → Source** and choose **GitHub Actions**.
-3. The included workflow (`.github/workflows/pages.yml`) runs on every push. When it finishes, your live link is:
-   `https://<your-username>.github.io/shopstream/`
 
-Alternative: drag the folder onto https://app.netlify.com/drop or run `npx vercel` for an instant live URL.
+2. Navigate to the project directory:
 
-## Tech
+   ```bash
+   cd shopstream
+   ```
 
-HTML5, CSS3 (grid/flexbox), vanilla ES6, `localStorage`.
+3. Open `index.html` in your browser.
+
+   Alternatively, start a local development server:
+
+   ```bash
+   python3 -m http.server 8000
+   ```
+
+   Visit `http://localhost:8000`.
+
+## 🌐 Live Demo
+
+[View ShopStream](https://<your-username>.github.io/shopstream/)
+
+## 📁 Project Structure
+
+```text
+shopstream/
+├── index.html
+├── style.css
+├── script.js
+└── .github/
+    └── workflows/
+        └── pages.yml
+```
+
+## 📦 Deployment
+
+Deploy for free using **GitHub Pages**:
+
+1. Push the project to a GitHub repository.
+2. Navigate to **Settings → Pages**.
+3. Select **GitHub Actions** as the deployment source.
+4. Your storefront will be published automatically using the included workflow.
+
+## 📌 Note
+
+This is an independent learning and portfolio project inspired by modern e-commerce platforms. It is not affiliated with Amazon or any other retailer.
+
+---
+
+**Built with ❤️ using HTML, CSS & JavaScript.**
